@@ -321,8 +321,9 @@ main {
 .side-menu-nav {
     display: flex;
     flex-direction: row;
-    overflow: hidden;
-    width: 504px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 320px;
     height: 40px;
     margin-left: 16px;
 }
