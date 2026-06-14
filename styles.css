@@ -1,23 +1,31 @@
 @font-face {
-    font-family: 'TT Lakes';
-    src: url(D:/Project/fonts/TTLakes-ExtraLight.woff) format('woff2');
+    font-family: 'TTLakes';
+    src: url('fonts/TTLakes-ExtraLight.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'TT Lakes';
-    src: url(D:/Project/fonts/TTLakes-Bold.woff) format('woff2');
+    font-family: 'TTLakes';
+    src: url('fonts/TTLakes-Bold.woff') format('woff');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'TT Lakes';
-    src: url(D:/Project/fonts/TTLakes-Medium.woff) format('woff2');
+    font-family: 'TTLakes';
+    src: url('fonts/TTLakes-Medium.woff') format('woff');
     font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TTLakes';
+    src: url('/fonts/TTLakes-Regular.woff') format('woff');
+    font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
@@ -154,6 +162,7 @@ body {
     Унифицированный интерлиньяж
    */
   line-height: 1.5;
+  font-family: var(--font-family-base);
 }
 
 /**
@@ -236,15 +245,16 @@ svg * {
     --color-light: #F8F8F8;
     --color-light-gray: #7E7E82;
     --color-dark: #1B1C21;
-    --font-family-base: 'TT Lakes', 'sans-serif';
+    --font-family-base: 'TTLakes', sans-serif;
 }
 
-body {
+.body {
     background-color: var(--color-light);
     font-family: var(--font-family-base);
     font-weight: 300;
     font-size: 14px;
     line-height: 18px;
+    width: auto;
 }
 
 .header {
@@ -252,10 +262,12 @@ body {
     justify-content: space-between;
     align-items: center;
     column-gap: 16px;  
-    width: 320px;
     height: 90px;
     box-shadow:0 -1px 0 0 D9FFF5 inset;
     padding: 0 16px;
+    font-family: var(--font-family-base);
+    box-shadow: 0 1px 0 0 #D9FFF5;
+    margin-bottom: 24px;
 }
 
 .button {
@@ -281,16 +293,14 @@ h2 {
     text-align: left;
     margin: 12px 0 15px 15px;
     vertical-align: middle;
-
 }
 
 main {
-    width: 320px;
     height: 509px;
+    font-family: var(--font-family-base);
 }
 
 .main-info {
-    width: 304px;
     height: 40px;
     display: flex;
     align-items: center;
@@ -303,8 +313,7 @@ main {
     font-size: 16px;
     font-weight: 500;
     color: var(--color-light-gray);
-    padding:8px 16px;
-    width: 246px;
+    padding:8px 16px; 
     height: 40px;
     letter-spacing: -0.2px;
     text-align: center;
@@ -323,17 +332,17 @@ main {
     flex-direction: row;
     overflow-x: auto;
     overflow-y: hidden;
-    width: 320px;
-    height: 40px;
+    height: 45px;
     margin-left: 16px;
+    scrollbar-width: thin;
 }
 
-.about-cps {
+.font-cps {
     margin-top: 24px;
     margin-bottom: 16px;
     margin-left: 16px;
     margin-right: 16px;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 14px;
     color: var(--color-dark);
 }
@@ -356,3 +365,103 @@ main {
 .cps-picture {
     margin: auto;
 }
+
+.header-call-menu-button,
+.header-chat-menu-button,
+.header-profile-menu {
+  display: none;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 16px;
+}
+
+.header-repair-menu-1120,
+.header-checkstatus-menu-1120 {
+  display: none;
+}
+
+.checkstatus-p,
+.repair-p {
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.2px;
+  margin-left: 32px;
+}
+
+.about-cps-768 {
+  display: none;
+}
+
+.about-cps-1120 {
+  display: none;
+}
+
+@media (min-width: 768px) {
+.header-call-menu-button,
+.header-chat-menu-button,
+.header-profile-menu {
+  display: flex;
+  }
+  .first-container-menu{
+    column-gap: 40px;
+  }
+  .first-block {
+    display: flex;
+    margin-top: 32px;
+  }
+  .about-cps {
+    display: none;
+  }
+  .about-cps-768 {
+    display: block;
+  }
+  .block-inside,
+  .cps-picture {
+    flex: 1;
+  }
+  .font-cps {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+@media (min-width: 1120px) {
+  .header {
+    display: none;
+  } 
+  main {
+    margin-top: 42px;
+  }
+  .header-repair-menu-1120,
+  .header-checkstatus-menu-1120 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.2px;
+  column-gap: 8px;
+  }
+  .container {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  .h2 {
+    flex-grow: 1;
+  }
+  .about-cps {
+    display: none;
+  }
+  .about-cps-768 {
+    display: none;
+  }
+  .about-cps-1120 {
+    display: block;
+  }
+}
+
