@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CPS Services</title>
     <link rel="stylesheet" href="./styles.css">
 </head>
-<body class="body">
+<body>
     <header class="header">
         <div class="first-container-menu container"> 
             <button 
@@ -15,7 +15,6 @@
                 <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1C0 0.447715 0.447715 0 1 0H17C17.5523 0 18 0.447715 18 1C18 1.55228 17.5523 2 17 2H1C0.447716 2 0 1.55228 0 1ZM0 8C0 7.44772 0.447715 7 1 7H9C9.55228 7 10 7.44772 10 8C10 8.55229 9.55229 9 9 9H1C0.447715 9 0 8.55229 0 8ZM1 14C0.447715 14 0 14.4477 0 15C0 15.5523 0.447716 16 1 16H13C13.5523 16 14 15.5523 14 15C14 14.4477 13.5523 14 13 14H1Z" fill="white"/>
                 </svg>
-
             </button>
             <a class="header-logo" href="#">
                 <img class="header-logo-image"
@@ -31,7 +30,7 @@
             <div class="header-divider">
                 <img 
                 src="./icons/divider-menu.svg" 
-                alt="">
+                alt="divider shadow">
             </div>
         </div>
         <div class="third-container-menu container">
@@ -93,13 +92,13 @@
     </header>
     <main>
         <div class="main-info">
-            <div class="hightlight">
+            <div class="highlight">
                 <img 
                 src="./icons/highlight.svg" 
-                alt="">
+                alt="highlight icon">
             </div>
             <div class="container">
-            <h2 class="h2">Услуги и сервисы</h2>
+            <h1 class="h1">Услуги и сервисы</h1>
                 <div class="header-repair-menu-1120">
                     <p class="repair-p">Оставить заявку</p>
                     <button 
@@ -113,7 +112,7 @@
                     </button>
                 </div>
                 <div class="header-checkstatus-menu-1120">
-                    <p class="checkstatus-p ">Статус ремонта</p>
+                    <p class="checkstatus-p">Статус ремонта</p>
                     <button 
                     class="header-checkstatus-menu-button button"
                     type="button">
@@ -138,7 +137,7 @@
                 <button type="button" class="fourth-button nav-button">
                     Адреса сервисных центров
                 </button>
-                <button type="button" class="fivth-button nav-button">
+                <button type="button" class="fifth-button nav-button">
                     Специальные цены
                 </button>
                 <button type="button" class="sixth-button nav-button">
@@ -149,24 +148,20 @@
         <div class="first-block">
             <div class="block-inside">
                 <p class="about-cps font-cps">
-                    Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
-                </p> 
-                <p class="about-cps-768 font-cps">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя. <br><br>Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера
-                </p>
-                <p class="about-cps-1120 font-cps">
                     Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя. <br><br>Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
-                </p>
-                <div class="read-more">
+                </p> 
+                <button class="read-more" type="button">
                     <img class="read-more-logo"
                         src="./icons/expand.svg" 
-                        alt="read more">
-                    <p class="read-more-text">Читать далее</p>
-                </div>
+                        alt="read more button">
+                    <span class="read-more-text">Читать далее</span>
+                </button>
             </div>
             <img class="cps-picture" 
                 src="./images/CPS.png" 
-                alt="">
+                alt="logo cps">
         </div>
     </main>
+    <script src="./script.js"></script>
 </body>
 </html>
